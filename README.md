@@ -1,6 +1,6 @@
 # BogoMonuments
-Explore our local Monument Sales Project, featuring a catalog with advanced sorting and editing capabilities, designed for administrators to manage product listings. Please note that ordering and payment occur externally.
-BogoMonuments
+Bogo Monument is a site for buying monuments
+
 BogoMonuments is a project dedicated to providing a platform for  purchasing monuments in memory of departed individuals. This project serves commercial purposes and has been designed to assist in the creation and sale of memorial monuments.
 
 Description
