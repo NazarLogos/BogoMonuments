@@ -3,7 +3,7 @@ Bogo Monument is a site for buying monuments
 
 BogoMonuments is a project dedicated to providing a platform for  purchasing monuments in memory of departed individuals. This project serves commercial purposes and has been designed to assist in the creation and sale of memorial monuments.
 
-Description
+Description:
 This repository contains the source code and documentation for the BogoMonuments project. The key features of the project include:
 
 User authentication and login functionality.
