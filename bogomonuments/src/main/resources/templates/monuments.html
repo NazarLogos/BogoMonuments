@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Bogo Monuments</title>
+
+    <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+            rel="stylesheet"
+    />
+
+    <link
+            href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+            rel="stylesheet"
+    />
+
+    <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.css"
+            rel="stylesheet"
+    />
+
+    <link th:href="@{/style/about.css}" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+
+</head>
+<body>
+<nav>
+    <div class="container-fluid p-0 bg-warning">
+        <div class="container-fluid container-lg p-0">
+            <div class="textColor">
+                <div class="row justify-content-center align-items-center mx-auto">
+                    <div class="col-12 col-lg-3 p-0">
+                        <div class="display-3 fw-bold py-2 text-center text-lg-start d-none d-lg-block">BOGO</div>
+                        <!-- <hr class="d-block d-lg-none"> -->
+                    </div>
+                    <div class="col-4 col-lg-3 sideLine">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <div class="me-3 p-2 py-3"><img class="iconHeight"
+                                                            src="/style/svg/building-check-svgrepo-com.png" alt="building">
+                            </div>
+                            <div class="d-none d-lg-block"><span class="fw-medium">Opening Hour</span> <br>
+                                Mon-Fri : 8:00 - 19:00</div>
+                        </div>
+                    </div>
+                    <div class="col-4 col-lg-3 sideLine">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <a href="#">
+                                <div class="me-3 p-2 py-3"><img class="iconHeight"
+                                                                src="/style/svg/telephone-inbound-svgrepo-com.png" alt="telephone"></div>
+                            </a>
+                            <div class="d-none d-lg-block"><span class="fw-medium">Call Us</span><br> +380-68-7777-77-77</div>
+                        </div>
+                    </div>
+                    <div class="col-4 col-lg-3">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <a href="#">
+                                <div class="me-3 p-2 py-3"><img class="iconHeight"
+                                                                src="/style/svg/closed-envelope-svgrepo-com.png" alt=""></div>
+                            </a>
+                            <div class="d-none d-lg-block"><span class="fw-medium">Email Us</span><br> bogo@gmail.com</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-0 d-lg-none">
+            <div class="text-center display-3 fw-bold mb-2 d-lg-none">BOGO</div>
+            <div class="navbarBgDark" data-bs-theme="dark">
+                <nav class="navbar navbar-expand-lg justify-content-center justify-content-lg-between p-0">
+
+                    <button class="navbar-toggler m-3 w-100" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                        Menu
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-between" id="navbarNavDropdown">
+                        <ul class="navbar-nav text-uppercase ps-3">
+                            <li class="nav-item">
+                                    <a class="nav-link  pe-3" aria-current="page" th:href="@{/}">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link px-lg-3" th:href="@{/about}">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link px-lg-3 " th:href="@{/monuments}">Monuments</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link px-lg-3" th:href="@{/contacts}">Contacts</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link px-lg-3" href="#">Discounts</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle px-lg-3" href="#" role="button"
+                                   data-bs-toggle="dropdown" aria-expanded="false">
+                                    Monument Category
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" th:href="@{/monuments_single}">Single Monuments</a></li>
+                                    <li><a class="dropdown-item" th:href="@{/monuments_double}">Double Monuments</a></li>
+                                    <li><a class="dropdown-item" th:href="@{/monuments_children}">Child Monuments</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <div class="text-white m-1 p-3">
+                            <button type="button" class="btn getBtn border border-white rounded-0">Get A
+                                Quote</button>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+
+<section >
+
+    <div class="container py-5">
+        <form class=" s mb-3" action="/monuments" method="get">
+            <select class="selectpicker show-tick" id="value" name="value">
+                <option value="5">Сортувати :</option>
+                <option value="1">Спочатку старі</option>
+                <option value="2">Спочатку дешевші</option>
+                <option value="3">Спочатку дорощі</option>
+                <option value="4">Спочатку нові</option>
+
+            </select>
+
+        </form>
+        <script>
+
+        </script>
+
+
+        <div class="row justify-content-center mb-3"th:each="monument : ${monuments}">
+            <div class="col-md-12 col-xl-10">
+                <div class="card shadow-0 border rounded-3">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-12 col-lg-3 col-xl-3 mb-4 mb-lg-0">
+                                <div class="bg-image hover-zoom ripple rounded ripple-surface">
+                                    <img  th:src="@{${monument.photosImagePath}}"
+                                         class="w-100" />
+                                    <a href="#!">
+                                        <div class="hover-overlay">
+                                            <div class="mask" style="background-color: rgba(253, 253, 253, 0.15);"></div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-6 col-xl-6">
+                                <h5 th:text="${monument.name}" ></h5>
+                                <div class="d-flex flex-row">
+                                    <div class="text-danger mb-1 me-2">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                    <span>289</span>
+                                </div>
+                                <div class="mt-1 mb-0 text-muted small">
+                                    <span th:text="${monument.kindOfMonument}"></span>
+                                    <span class="text-primary"> • </span>
+                                    <span th:text="${monument.color}">Light weight</span>
+                                    <span class="text-primary"> • </span>
+                                    <span th:text="${monument.kindOfStone}">Best finish<br /></span>
+                                </div>
+                                <div class="mb-2 text-muted small">
+                                    <span  th:text="${monument.material}">Unique design</span>
+                                    <span class="text-primary"> • </span>
+                                    <span th:text="${monument.weight} ">For men</span>
+                                </div>
+                                <p class="text-truncate mb-4 mb-md-0" th:text="${monument.description}">
+
+                                </p>
+                            </div>
+                            <div class="col-md-6 col-lg-3 col-xl-3 border-sm-start-none border-start">
+                                <div class="d-flex flex-row align-items-center mb-1">
+                                    <h4>$</h4>
+                                    <h4 class="mb-1 me-1" th:text="${monument.price}">"$"</h4>
+                                    <s class="text-danger">$<span class="text-danger"  th:text="${monument.price}+400"><s>$21.99</s></span></s>
+                                </div>
+                                <h6 class="text-success">Free shipping</h6>
+                                <div class="d-flex flex-column mt-4">
+                                    <a  class="btn btn-primary btn-sm" type="button"
+                                       th:href="@{/monuments/{monumentId}/view(monumentId=${monument.id})}">Details</a>
+                                    <a sec:authorize="hasRole('ADMIN')" class="btn btn-outline-primary btn-sm mt-2"
+                                       th:href="@{/monuments/{monumentId}/edit(monumentId=${monument.id})}">Edit</a>
+
+                                    <a sec:authorize="hasRole('ADMIN')" class="btn btn-outline-primary btn-sm mt-2" type="button"
+                                           th:href="@{/monuments/{monumentId}/delete(monumentId=${monument.id})}">
+                                        Delete
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer >
+    <div class="container  mt-4">
+        <footer class="py-5">
+            <div class="row">
+                <div class="col-2">
+                    <h5>Main Pages</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a th:href="@{/home}" class="nav-link p-0 text-muted">Home</a></li>
+                        <li class="nav-item mb-2"><a th:href="@{/about}" class="nav-link p-0 text-muted">About</a></li>
+                        <li class="nav-item mb-2"><a th:href="@{/monuments}" class="nav-link p-0 text-muted">Monuments</a></li>
+                        <li class="nav-item mb-2"><a th:href="@{/contacts}" class="nav-link p-0 text-muted">Contacts</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Discounts</a></li>
+                    </ul>
+                </div>
+
+
+
+                <div class="col-4 offset-1">
+                    <form>
+                        <h5>Subscribe to our newsletter</h5>
+                        <p>Monthly digest of whats new and exciting from us.</p>
+                        <div class="d-flex w-100 gap-2">
+                            <label for="newsletter1" class="visually-hidden">Email address</label>
+                            <input id="newsletter1" type="text" class="form-control" placeholder="Email address" fdprocessedid="aihqu">
+                            <button class="btn btn-primary" type="button" fdprocessedid="ivoqf9">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-between py-4 my-4 border-top">
+                <p>© 2023 Company Nazar D, Inc. All rights reserved.</p>
+                <ul class="list-unstyled d-flex">
+                    <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
+                    <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
+                    <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/style/js/value.js"></script>
+
+</body>
+</html>
